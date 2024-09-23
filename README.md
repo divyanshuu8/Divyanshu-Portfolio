@@ -1,4 +1,4 @@
-# Portfolio of Vinayak Singh
+# Portfolio of Divyanshu Singh
 
 Live-Link - 
  
