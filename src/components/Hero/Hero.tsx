@@ -15,7 +15,7 @@ export function Hero() {
           <p>Hello <img src={Hello} alt="Hello" width="20px"/>, I'm</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
-          <h1>Harshad Fozdar</h1>
+          <h1>Divyanshu Singh</h1>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
           <h3>Programmer / Full Stack Developer</h3>
