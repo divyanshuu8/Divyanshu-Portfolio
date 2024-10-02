@@ -145,16 +145,10 @@ export function Project() {
             <div className="body">
               <h3>To-Do DApp (Decentralized Application)</h3>
               <p>
-                To-Do DApp (Decentralized Application) is a web application that
-                allows users to manage tasks on the blockchain. It uses React
-                for the front-end interface, providing a responsive and
-                interactive user experience. Solidity is used to write smart
-                contracts that run on the Ethereum blockchain, ensuring data
-                integrity and decentralization. Users can add, update, and
-                delete tasks, with all actions recorded on the blockchain for
-                transparency and security. This combination leverages the power
-                of decentralized technology to create a reliable and
-                tamper-proof task management system.
+                The To-Do DApp lets users manage tasks on the Ethereum
+                blockchain, using React for the front end and Solidity for smart
+                contracts, ensuring data integrity, transparency, and
+                decentralized task management.
               </p>
             </div>
             <footer>
@@ -163,6 +157,61 @@ export function Project() {
                 <li>MetaMask</li>
                 <li>Node</li>
                 <li>React</li>
+              </ul>
+            </footer>
+          </div>
+        </ScrollAnimation>
+
+        <ScrollAnimation animateIn="flipInX">
+          <div className="project">
+            <header>
+              <svg
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#23ce6b "
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <title>Folder</title>{" "}
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>{" "}
+              </svg>
+              <div className="project-links">
+                <a
+                  href="https://github.com/divyanshuu8/web-Scraper"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={githubIcon} alt="Visit site" />{" "}
+                </a>
+                <a
+                  href="https://prisewise.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={externalLink} alt="Visit site" />
+                </a>
+              </div>
+            </header>
+            <div className="body">
+              <h3>priseWise - eCommerce Price Tracker</h3>
+              <p>
+                PriseWise is a powerful web scraping tool designed to help users
+                extract and track product information from Amazon, enabling them
+                to receive alerts for price changes, stock updates, and more.
+              </p>
+            </div>
+            <footer>
+              <ul className="tech-list">
+                <li>Next.js</li>
+                <li>Bright Data</li>
+                <li>Cheerio</li>
+                <li>Nodemailer</li>
+                <li>MongoDB</li>
+                <li>Tailwind CSS</li>
               </ul>
             </footer>
           </div>
