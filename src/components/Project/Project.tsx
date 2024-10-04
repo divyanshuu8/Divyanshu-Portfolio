@@ -101,17 +101,9 @@ export function Project() {
                   <img src={githubIcon} alt="Visit site" />{" "}
                 </a>
                 <a
-                  href="#"
+                  href="https://yelp-camp-2jja.onrender.com/"
                   target="_blank"
                   rel="noreferrer"
-                  onClick={(e) => e.preventDefault()}
-                  style={{
-                    pointerEvents: "none", // Disable pointer events
-                    color: "gray", // Change text color to gray
-                    textDecoration: "none", // Remove underline
-                    cursor: "not-allowed", // Change cursor to indicate it's not clickable
-                    opacity: 0.5, // Make it slightly transparent
-                  }}
                 >
                   <img src={externalLink} alt="Visit site" style={{ pointerEvents: 'none' }} />
                 </a>
