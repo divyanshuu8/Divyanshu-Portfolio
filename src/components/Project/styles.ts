@@ -1,23 +1,22 @@
 import styled from "styled-components";
 
-
 export const Container = styled.section`
   margin-top: 15rem;
-  
-  h2{
+
+  h2 {
     text-align: center;
     font-size: 4rem;
     margin-bottom: 3rem;
   }
-  .projects{
+  .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 2rem;
     padding: 1rem;
     overflow: hidden;
 
-    .project{
+    .project {
       padding: 2rem 1.8rem;
       background-color: #2b2b2b;
       border-radius: 1.2rem;
@@ -25,48 +24,48 @@ export const Container = styled.section`
       display: flex;
       flex-direction: column;
       height: 100%;
-      color: #FFF;
-      &:hover{
+      color: #fff;
+      &:hover {
         transform: translateY(-5px);
         background-color: var(--pink);
       }
 
-      header{
+      header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         color: var(--blue);
         margin-bottom: 3.6rem;
-        .project-links{
+        .project-links {
           display: flex;
           align-items: center;
           gap: 1rem;
         }
         a > img {
-          width: 5.0rem;
+          width: 5rem;
         }
       }
-      
-      h3{
+
+      h3 {
         margin-bottom: 2rem;
       }
 
-      p{
+      p {
         letter-spacing: 0.12rem;
         margin-bottom: 2rem;
-        a{
-          color: #FFFF;
+        a {
+          color: #ffff;
           border-bottom: 1px solid var(--green);
           transition: color 0.25s;
-          &:hover{
+          &:hover {
             color: var(--green);
           }
         }
       }
 
-      footer{
+      footer {
         margin-top: auto;
-        .tech-list{
+        .tech-list {
           display: flex;
           align-items: center;
           gap: 2rem;
@@ -74,19 +73,32 @@ export const Container = styled.section`
           opacity: 0.6;
         }
       }
-
     }
   }
 
-  @media (max-width: 960px){
-    .projects{
-      grid-template-columns: 1fr 1fr;
+  @media (max-width: 960px) {
+    .projects {
+      grid-template-columns: 1fr 1fr; // Two columns for medium screens
+      padding: 0 1rem; // Prevent overflow
     }
   }
 
-  @media (max-width: 740px){
-    .projects{
-      grid-template-columns: 1fr;
-    }
+  @media (max-width: 740px) {
+  .projects {
+    display: flex; // Use flexbox for layout
+    flex-direction: column; // Stack items in a column
+    padding: 0 1rem; // Horizontal padding to prevent overflow
+    box-sizing: border-box; // Include padding in width calculation
+    width: 100%; // Full width
+    overflow: hidden; // Prevent overflow
+    gap: 2rem; // Optional: Add spacing between items
   }
-`
+
+  .project {
+    padding: 1.5rem; // Adjust padding for smaller screens
+    margin: 0 auto; // Center project items
+    width: 100%; // Full width for project items
+  }
+}
+
+`;
