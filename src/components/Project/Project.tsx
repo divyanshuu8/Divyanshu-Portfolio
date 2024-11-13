@@ -6,7 +6,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 export function Project() {
   return (
-    <Container id="project" >
+    <Container id="project">
       <h2>My Projects</h2>
       <div className="projects">
         <ScrollAnimation animateIn="flipInX">
@@ -49,7 +49,11 @@ export function Project() {
                     opacity: 0.5, // Make it slightly transparent
                   }}
                 >
-                  <img src={externalLink} alt="Visit site" style={{ pointerEvents: 'none' }} />
+                  <img
+                    src={externalLink}
+                    alt="Visit site"
+                    style={{ pointerEvents: "none" }}
+                  />
                 </a>
               </div>
             </header>
@@ -105,7 +109,11 @@ export function Project() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={externalLink} alt="Visit site" style={{ pointerEvents: 'none' }} />
+                  <img
+                    src={externalLink}
+                    alt="Visit site"
+                    style={{ pointerEvents: "none" }}
+                  />
                 </a>
               </div>
             </header>
@@ -167,7 +175,11 @@ export function Project() {
                     opacity: 0.5, // Make it slightly transparent
                   }}
                 >
-                  <img src={externalLink} alt="Visit site" style={{ pointerEvents: 'none' }} />
+                  <img
+                    src={externalLink}
+                    alt="Visit site"
+                    style={{ pointerEvents: "none" }}
+                  />
                 </a>
               </div>
             </header>
@@ -176,8 +188,7 @@ export function Project() {
               <p>
                 The To-Do DApp lets users manage tasks on the Ethereum
                 blockchain, using React for the front end and Solidity for smart
-                contracts, ensuring data integrity, transparency, and
-                decentralized task management.
+                contracts, transparency, and decentralized task management.
               </p>
             </div>
             <footer>
@@ -240,6 +251,63 @@ export function Project() {
                 <li>Cheerio</li>
                 <li>Nodemailer</li>
                 <li>MongoDB</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </footer>
+          </div>
+        </ScrollAnimation>
+
+        <ScrollAnimation animateIn="flipInX">
+          <div className="project">
+            <header>
+              <svg
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#23ce6b "
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <title>Folder</title>{" "}
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>{" "}
+              </svg>
+              <div className="project-links">
+                <a
+                  href="https://github.com/divyanshuu8/AcePrep"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={githubIcon} alt="Visit site" />{" "}
+                </a>
+                <a
+                  href="https://aceprep.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={externalLink} alt="Visit site" />
+                </a>
+              </div>
+            </header>
+            <div className="body">
+              <h3>AcePrep - Softskills Assessments</h3>
+              <p>
+                AcePrep is an innovative softskills assessment platform designed
+                to help individuals improve their communication abilities. The
+                platform leverages cutting-edge generative AI technology to
+                assess your speaking, writing, and interpersonal skills through
+                a series of interactive tests and exercises
+              </p>
+            </div>
+            <footer>
+              <ul className="tech-list">
+                <li>React.js</li>
+                <li>Gemini AI</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+                <li>Node</li>
                 <li>Tailwind CSS</li>
               </ul>
             </footer>
