@@ -313,6 +313,62 @@ export function Project() {
             </footer>
           </div>
         </ScrollAnimation>
+        <ScrollAnimation animateIn="flipInX">
+          <div className="project">
+            <header>
+              <svg
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#23ce6b"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <title>Folder</title>
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <div className="project-links">
+                <a
+                  href="https://github.com/divyanshuu8/Bharat_Vyaapar_Setu"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={githubIcon} alt="Visit site" />{" "}
+                </a>
+                <a
+                  href="https://bharatvyaparsetu.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={externalLink} alt="Visit site" />
+                </a>
+              </div>
+            </header>
+            <div className="body">
+              <h3>BharatVyapar-Setu</h3>
+              <p>
+                BharatVyaparSetu is a hackathon project from the Amazon Smbhav
+                Hackathon 2024, designed to simplify trade communication and
+                insights document compliance. The project aims to streamline the
+                exchange of business documents and enhance communication
+                efficiency.
+              </p>
+            </div>
+            <footer>
+              <ul className="tech-list">
+                <li>MongoDB</li>
+                <li>Express.js</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>Twillio</li>
+                <li>GoogleMaps</li>
+              </ul>
+            </footer>
+          </div>
+        </ScrollAnimation>
 
         {/* <ScrollAnimation animateIn="flipInX">
           <div className="project">
