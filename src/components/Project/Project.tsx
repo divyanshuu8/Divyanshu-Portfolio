@@ -37,7 +37,7 @@ export function Project() {
                 </a>
 
                 <a
-                  href="#"
+                  href="/"
                   target="_blank"
                   rel="noreferrer"
                   onClick={(e) => e.preventDefault()}
@@ -163,7 +163,7 @@ export function Project() {
                   <img src={githubIcon} alt="Visit site" />{" "}
                 </a>
                 <a
-                  href="#"
+                  href="/"
                   target="_blank"
                   rel="noreferrer"
                   onClick={(e) => e.preventDefault()}
