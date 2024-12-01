@@ -88,6 +88,11 @@ const FloatingFormCard: React.FC<MainProps> = ({ setShowForm }) => {
               if (isMounted) {
                 setShowForm(false); // Hide the form on successful submission
               }
+              setTimeout(() => {
+                toast("While you're here, you can view my portfolio!", {
+                  icon: "👏",
+                });
+              }, 1000); // 1-second delay
 
               return "Form submitted successfully!"; // Return success message
             } else {
