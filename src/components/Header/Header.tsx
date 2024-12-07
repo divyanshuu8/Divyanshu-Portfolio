@@ -1,16 +1,25 @@
-import { Container } from './styles'
-import { BrowserRouter as Router } from 'react-router-dom'
-import { NavHashLink, HashLink } from 'react-router-hash-link'
-import { useState } from 'react'
-import Resume from '../../assets/Resume_Divyanshu.pdf'
-export function Header() {
-  const [isActive, setActive] = useState(false)
+import { Container } from "./styles";
+import { BrowserRouter as Router } from "react-router-dom";
+import { NavHashLink, HashLink } from "react-router-hash-link";
+import { useState } from "react";
+import Resume from "../../assets/Divyanshu_SDE.pdf";
+
+interface MainProps {
+  setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export function Header({ setShowForm }: MainProps) {
+  const [isActive, setActive] = useState(false);
   function toggleTheme() {
-    let html = document.getElementsByTagName('html')[0]
-    html.classList.toggle('light')
+    let html = document.getElementsByTagName("html")[0];
+    html.classList.toggle("light");
   }
   function closeMenu() {
-    setActive(false)
+    setActive(false);
+  }
+  function closeMenuOpenContact(){
+    setActive(false);
+    setShowForm(true);
   }
   return (
     <Container className="header-fixed">
@@ -26,8 +35,7 @@ export function Header() {
           id="switch"
           name="mode"
         />
-        <label htmlFor="switch">Toggle</label>
-        <nav className={isActive ? 'active' : ''}>
+        <nav className={isActive ? "active" : ""}>
           <NavHashLink smooth to="#home" onClick={closeMenu}>
             Home
           </NavHashLink>
@@ -37,7 +45,7 @@ export function Header() {
           <NavHashLink smooth to="#project" onClick={closeMenu}>
             Project
           </NavHashLink>
-          <NavHashLink smooth to="#contact" onClick={closeMenu}>
+          <NavHashLink smooth to="#contact" onClick={closeMenuOpenContact}>
             Contact
           </NavHashLink>
           <a href={Resume} download className="button">
@@ -45,15 +53,15 @@ export function Header() {
           </a>
         </nav>
         <div
-          aria-expanded={isActive ? 'true' : 'false'}
+          aria-expanded={isActive ? "true" : "false"}
           aria-haspopup="true"
-          aria-label={isActive ? 'Fechar menu' : 'Abrir menu'}
-          className={isActive ? 'menu active' : 'menu'}
+          aria-label={isActive ? "Fechar menu" : "Abrir menu"}
+          className={isActive ? "menu active" : "menu"}
           onClick={() => {
-            setActive(!isActive)
+            setActive(!isActive);
           }}
         ></div>
       </Router>
     </Container>
-  )
+  );
 }

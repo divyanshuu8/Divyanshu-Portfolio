@@ -14,7 +14,7 @@ function App() {
     <>
       <Toaster position="top-center" />
       <GlobalStyle />
-      <Header />
+      <Header setShowForm={setShowForm} />
       {showForm && <FloatingFormCard setShowForm={setShowForm} />}
       <Main setShowForm={setShowForm} />
       <Footer />
