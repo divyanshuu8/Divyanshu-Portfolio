@@ -88,6 +88,68 @@ export function Project() {
                 role="img"
                 viewBox="0 0 24 24"
                 fill="none"
+                stroke="#23ce6b"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                {" "}
+                <title>Folder</title>{" "}
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>{" "}
+              </svg>
+              <div className="project-links">
+                <a
+                  href="https://github.com/divyanshuu8/Wellness-Oracle"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={githubIcon} alt="Visit site" />
+                </a>
+
+                <a
+                  href="https://wellness-oracle.netlify.app"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={externalLink}
+                    alt="Visit site"
+                    style={{ pointerEvents: "none" }}
+                  />
+                </a>
+              </div>
+            </header>
+            <div className="body">
+              <h3>Wellness-Oracle (ML-Project)</h3>
+              <p>
+                Wellness-Oracle is a machine learning-based project designed to
+                help individuals identify potential diseases based on their
+                symptoms. By analyzing user-inputted symptoms, the system
+                utilizes advanced machine learning models built with Python and
+                Pytorch to predict possible conditions.
+              </p>
+            </div>
+            <footer>
+              <ul className="tech-list">
+                <li>Python</li>
+                <li>Pytorch</li>
+                <li>Machine Learning</li>
+                <li>React</li>
+                <li>FastApi</li>
+              </ul>
+            </footer>
+          </div>
+        </ScrollAnimation>
+
+        <ScrollAnimation animateIn="flipInX">
+          <div className="project">
+            <header>
+              <svg
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
                 stroke="#23ce6b "
                 strokeWidth="1"
                 strokeLinecap="round"
