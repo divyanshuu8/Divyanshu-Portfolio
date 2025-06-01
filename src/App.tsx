@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import FloatingFormCard from "./components/FloatingCard";
 
 function App() {
-  const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <>
