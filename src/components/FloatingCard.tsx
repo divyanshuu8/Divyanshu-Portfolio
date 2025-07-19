@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import toast from "react-hot-toast"; // Import react-hot-toast
 
@@ -23,6 +23,7 @@ const FloatingFormCard: React.FC<MainProps> = ({ setShowForm }) => {
   });
   const [loading, setLoading] = useState(false); // Loading state to track form submission status
   const [isMounted, setIsMounted] = useState(true); // Track whether the component is mounted
+  const form = useRef<HTMLFormElement>(null); // Ref for the form
 
   useEffect(() => {
     // Cleanup function to set isMounted to false when the component unmounts
@@ -67,50 +68,41 @@ const FloatingFormCard: React.FC<MainProps> = ({ setShowForm }) => {
     // Proceed with the form submission if validation passes
     toast
       .promise(
-        fetch("https://nodemailer-gmail.onrender.com/divyanshu", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        })
-          .then(async (response) => {
-            if (response.ok) {
-              const data = await response.json();
-              console.log("Form submitted successfully:", data);
-              setFormData({
-                name: "",
-                email: "",
-                mobile: "",
-                service: "",
-              });
-
-              if (isMounted) {
-                setShowForm(false); // Hide the form on successful submission
-              }
-              setTimeout(() => {
-                toast("While you're here, you can view my portfolio!", {
-                  icon: "👏",
-                });
-              }, 1000); // 1-second delay
-
-              return "Form submitted successfully!"; // Return success message
-            } else {
-              throw new Error("Error submitting form");
-            }
-          })
-          .catch((error) => {
-            console.error("Form submission failed:", error);
-            throw new Error("Could not submit the form. Please try again.");
-          }),
+        emailjs.sendForm(
+          "service_b548mdy", // Replace with your actual EmailJS service ID
+          "template_sj5um3h", // Replace with your EmailJS template ID
+          form.current!, // Form ref
+          "AUcF5MKl52NOAXrPN" // Replace with your EmailJS public key
+        ),
         {
           loading: "Submitting form...",
           success: <b>Form submitted successfully!</b>,
           error: <b>Could not submit the form. Please try again.</b>,
         }
       )
+      .then(() => {
+        setFormData({
+          name: "",
+          email: "",
+          mobile: "",
+          service: "",
+        });
+
+        if (isMounted) {
+          setShowForm(false);
+        }
+
+        setTimeout(() => {
+          toast("While you're here, you can view my portfolio!", {
+            icon: "👏",
+          });
+        }, 1000);
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+      })
       .finally(() => {
-        setLoading(false); // Ensure loading is reset after the promise is settled (success or failure)
+        setLoading(false);
       });
   };
 
@@ -124,7 +116,7 @@ const FloatingFormCard: React.FC<MainProps> = ({ setShowForm }) => {
         <CloseButton onClick={handleClose}>X</CloseButton>
         {/* Cross button to close form */}
         <h2>Contact Us</h2>
-        <Form onSubmit={handleSubmit}>
+        <Form ref={form} onSubmit={handleSubmit}>
           <Label>
             Name
             <Input
